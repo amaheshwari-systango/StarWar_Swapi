@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= searchString %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h3>Search Results for
+        <%= searchString %>
+    </h3>
+
+    <%if ( data.length > 0) { %>
+        <table>
+            <% for(var i=0; i < data.length; i++) { %>
+
+                <tr>
+                    <td>
+                        ======================================
+                        <br> Name :
+                        <%= data[i].name %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mass:
+                        <%= data[i].mass %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hair Color:
+                        <%= data[i].hair_color %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Skin Color:
+                        <%= data[i].skin_color %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eye Color:
+                        <%= data[i].eye_color %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Birth Year:
+                        <%= data[i].birth_year %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>gender:
+                        <%= data[i].gender %>
+                    </td>
+                </tr>
+                <td>
+                    Height :
+                    <%= data[i].height %>
+                        <br> ======================================
+                </td>
+                </tr>
+                <% } %>
+        </table>
+        <% }
+ else{ %>
+            <h1>
+                <%= message %>
+            </h1>
+            <% } %>
+</body>
+
+</html>
